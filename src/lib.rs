@@ -7,11 +7,16 @@ use wasm_bindgen::prelude::*;
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
-extern {
+extern "C" {
     fn alert(s: &str);
 }
 
-#[wasm_bindgen(start)]
-pub fn greet() {
-    alert("Welcome to Rust!");
+#[wasm_bindgen]
+pub fn main() -> Result<(), JsValue> {
+    #[cfg(debug_assertions)]
+    console_error_panic_hook::set_once();
+
+    alert("Hello World");
+
+    Ok(())
 }

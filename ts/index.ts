@@ -1,1 +1,1 @@
-import('../pkg/index').catch(console.error)
+import('../pkg/index').then(module => module.main()).catch(console.error)

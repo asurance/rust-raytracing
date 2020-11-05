@@ -1,22 +1,21 @@
 {
-    "name": "rust-webassembly-typescript",
-    "version": "0.0.0",
-    "description": "Template for rust-webassembly-typescript project",
+    "name": "rust-raytracing",
+    "version": "0.1.0",
+    "description": "Raytracing use rust",
     "scripts": {
         "build": "rimraf dist pkg && cross-env TS_NODE_PROJECT=\"config/tsconfig.json\" webpack --config config/webpack.prod.config.ts",
         "start": "cross-env TS_NODE_PROJECT=\"config/tsconfig.json\" webpack-dev-server --progress --config config/webpack.dev.config.ts",
-        "test": "cargo test && wasm-pack test --headless",
         "build:pkg": "wasm-pack build --out-name index"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/asurance/rust-webassembly-typescript.git"
+        "url": "git+https://github.com/asurance/rust-raytracing.git"
     },
     "author": "asurance",
     "bugs": {
-        "url": "https://github.com/asurance/rust-webassembly-typescript/issues"
+        "url": "https://github.com/asurance/rust-raytracing/issues"
     },
-    "homepage": "https://github.com/asurance/rust-webassembly-typescript#readme",
+    "homepage": "https://github.com/asurance/rust-raytracing#readme",
     "devDependencies": {
         "@types/friendly-errors-webpack-plugin": "^0.1.2",
         "@types/html-webpack-plugin": "^3.2.3",
